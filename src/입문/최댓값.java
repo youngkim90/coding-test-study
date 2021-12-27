@@ -1,4 +1,4 @@
-package 초급;
+package 입문;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
