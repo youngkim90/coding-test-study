@@ -32,6 +32,13 @@ public class BFS와DFS {
         scan.close();
     }
 
+    /**
+     * BFS
+     * 루트 노드 또는 임의 노드에서 인접한 노드부터 먼저 탐색하는 방법
+     * 최소 비용(즉, 모든 곳을 탐색하는 것보다 최소 비용이 우선일 때)에 적합
+     * 큐를 통해 구현
+     * 시간복잡도 - O(V+E) (V: 정점의 수, E: 간선의 수)
+     */
     public static void BFS(int start) {
         Queue<Integer> queue = new LinkedList<Integer>();
         queue.offer(start);
@@ -50,6 +57,13 @@ public class BFS와DFS {
         }
     }
 
+    /**
+     * DFS
+     * 루트 노드 혹은 임의 노드에서 다음 브랜치로 넘어가기 전에, 해당 브랜치를 모두 탐색하는 방법
+     * 모든 경로를 방문해야 할 경우 사용에 적합
+     * 스택 or 재귀함수를 통해 구현
+     * 시간복잡도 - O(V+E) (V: 정점의 수, E: 간선의 수)
+     */
     public static void DFS(int start) {
         visited[start] = true;
         System.out.print(start + " ");
