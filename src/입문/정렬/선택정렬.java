@@ -1,4 +1,4 @@
-package 입문;
+package 입문.정렬;
 
 import java.io.IOException;
 import java.util.Arrays;

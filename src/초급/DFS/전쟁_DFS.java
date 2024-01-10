@@ -1,4 +1,4 @@
-package 초급;
+package 초급.DFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
