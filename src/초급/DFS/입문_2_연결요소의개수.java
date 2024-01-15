@@ -37,7 +37,7 @@ public class 입문_2_연결요소의개수 {
         for (int i = 1; i <= N; i++) {
             if (!visited[i]) {
                 dfs(i);
-                answer++;
+                answer++; // 연결된 노드의 요소 개수 증가
             }
         }
 
