@@ -4,7 +4,7 @@ import java.util.*;
 import java.io.*;
 
 /**
- * 백준 2606번(실버3)
+ * 백준 2606번
  */
 public class 입문_1_바이러스 {
     static boolean[][] graph;
@@ -46,7 +46,7 @@ public class 입문_1_바이러스 {
         visited[idx] = true;
         answer++;
 
-        for (int i = 1; i < N; i++) {
+        for (int i = 1; i <= N; i++) {
             // i번째 노드를 방문하지 않았고, i번째 노드와 idx번째 노드가 연결되어 있는 경우 dfs 호출
             if (!visited[i] && graph[idx][i])
                 dfs(i); // 재귀호출

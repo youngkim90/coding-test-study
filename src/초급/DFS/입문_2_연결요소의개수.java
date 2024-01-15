@@ -4,7 +4,7 @@ import java.util.*;
 import java.io.*;
 
 /**
- * 백준 11724번(실버2)
+ * 백준 11724번
  */
 public class 입문_2_연결요소의개수 {
     final static int MAX = 1000 + 10;
