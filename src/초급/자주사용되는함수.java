@@ -1,4 +1,4 @@
-package 초급.백준;
+package 초급;
 
 import java.util.*;
 
