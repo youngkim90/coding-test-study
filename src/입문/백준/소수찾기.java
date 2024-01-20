@@ -1,4 +1,4 @@
-package 입문;
+package 입문.백준;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

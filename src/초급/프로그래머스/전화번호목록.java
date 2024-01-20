@@ -1,4 +1,4 @@
-package 초급;
+package 초급.프로그래머스;
 
 
 import java.util.Arrays;

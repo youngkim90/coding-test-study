@@ -1,4 +1,4 @@
-package 초급;
+package 초급.백준;
 
 import java.util.Scanner;
 

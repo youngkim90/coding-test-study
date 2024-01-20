@@ -1,4 +1,4 @@
-package 입문;
+package 입문.프로그래머스;
 
 import java.util.Arrays;
 import java.util.HashSet;
