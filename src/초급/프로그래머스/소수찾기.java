@@ -35,7 +35,7 @@ public class 소수찾기 {
         for (int i = 0; i < number.length(); i++) {
             if (visited[i]) continue;
             visited[i] = true;
-            dfs(Integer.parseInt(String.valueOf(num) + number.charAt(i)));
+            dfs(num * 10 + (number.charAt(i) - '0'));
             visited[i] = false; // backtracking
         }
     }
