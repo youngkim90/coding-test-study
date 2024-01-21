@@ -17,8 +17,7 @@ public class 카펫 {
 
         for(int i=3; i<=sum; i++) {
             if(sum % i == 0) {
-                int x = sum / i;
-                int y = sum / x;
+                int x = sum / i, y = sum / x;
 
                 if(x >= y && x >= 3 && y >= 3) {
                     if(yellow == (x-2) * (y-2)) {
