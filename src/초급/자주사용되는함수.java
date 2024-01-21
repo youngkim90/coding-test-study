@@ -1,28 +1,40 @@
 package 초급;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class 자주사용되는함수 {
+    /* 배열 */
     void Arrays() {
-        Integer arr1[] = {10, 8, 11, 2, 3, 0};
+        int[] arr1 = {10, 8, 11, 2, 3, 0};
 
         // 1. 오름차순 {0, 2, 3, 8, 10, 11}
         Arrays.sort(arr1);
 
         // 2. 내림차순 {11, 10, 8, 3, 2, 0}
-        Arrays.sort(arr1, Collections.reverseOrder());
+        Arrays.sort(IntStream.of(arr1).boxed().toArray(), Collections.reverseOrder());
 
         // 3. 일부만 정렬 {2, 8, 11, 10, 3, 0} (0~4만 정렬)
-        Arrays.sort(arr1, 0, 4);
+        Arrays.sort(IntStream.of(arr1).boxed().toArray(), 0, 4);
 
         // 4. 오름차순 정렬하면 binary search로 특정 값을 찾을 수 있다.
         Arrays.binarySearch(arr1, 2);
 
         // 5. 배열을 어레이리스트로 변환할 떼!
-        List list = Arrays.asList(arr1);
+        List list = Arrays.stream(arr1).boxed().collect(Collectors.toList());
 
         // 6. 배열의 특정 범위 자르기
-        Integer tmp[] = Arrays.copyOfRange(arr1, 0, 3);
+        int[] tmp = Arrays.copyOfRange(arr1, 0, 3);
+
+        // 7. 배열의 원소 중 특정 조건에 만족하는 원소가 있는지 확인
+        boolean bo = Arrays.stream(arr1).boxed().anyMatch(val -> val > 3);
+
+        // 8. 배열의 모든 원소를 계산 후에 하나의 결과로 뽑아낼 때 사용 reduce(초기값, 람다식(누적값, 현재값))
+        int result = Arrays.stream(arr1).boxed().reduce(1, (x, y) -> x * (y + 1));
+
+        // 9. 리스트 컬렉션을 int형 배열로 변환
+        int[] array = new ArrayList<Integer>().stream().mapToInt(i -> i).toArray();
     }
 
     void String() {
